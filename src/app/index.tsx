@@ -29,7 +29,6 @@ function LoginScreen() {
         label="Digite seu Email:" 
         placeholder="email@example.com" 
         value={email}
-        onChangeText={setEmail}
       />
 
       {/* Campo de Senha */}
@@ -38,8 +37,14 @@ function LoginScreen() {
         placeholder="*******" 
         secureTextEntry
         value={password}
-        onChangeText={setPassword}
       />
+
+      {/* Link "Esqueceu a senha?" */}
+      <View style={styles.ContainerRecPass}>
+        <Link href="/Recuperar-senha" style={styles.link}>
+          Esqueceu a senha?
+        </Link>
+      </View>
 
       {/* Botão Continuar */}
       <Button
@@ -112,6 +117,9 @@ const styles = StyleSheet.create({
   link: {
     color: "#FF3366",
     textDecorationLine: "underline",
+  },
+  ContainerRecPass: {
+    marginBottom: 10,
   },
 });
 

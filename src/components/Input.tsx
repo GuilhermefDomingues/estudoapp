@@ -4,12 +4,10 @@ type Props = {
   label?: string;
   placeholder?: string;
   value?: string;
-  onChangeText?: (text: string) => void;
   secureTextEntry?: boolean;
-  keyboardType?: "default" | "numeric" | "email-address";
 };
 
-function Input({ label, placeholder, value, onChangeText, secureTextEntry, keyboardType = "default" }: Props) {
+function Input({ label, placeholder, value, secureTextEntry,}: Props) {
   return (
     <View style={styles.container}>
       {label && <Text style={styles.label}>{label}</Text>} 
@@ -17,9 +15,7 @@ function Input({ label, placeholder, value, onChangeText, secureTextEntry, keybo
         style={styles.input}
         placeholder={placeholder}
         value={value}
-        onChangeText={onChangeText}
         secureTextEntry={secureTextEntry}
-        keyboardType={keyboardType}
         placeholderTextColor="#999"
       />
     </View>
@@ -28,7 +24,7 @@ function Input({ label, placeholder, value, onChangeText, secureTextEntry, keybo
 
 const styles = StyleSheet.create({
   container: {
-    width: "100%", // Garante que o container ocupe toda a largura
+    width: "100%",
     paddingHorizontal: 10, // Adicionado paddingHorizontal no container para não cortar as bordas
   },
   label: {
@@ -38,8 +34,8 @@ const styles = StyleSheet.create({
     color: "#D6005D",
   },
   input: {
-    width: "100%", // Garante que o TextInput ocupe 100% da largura
-    height: 50, // Altura fixa
+    width: "100%",
+    height: 50,
     backgroundColor: "#FFF",
     borderRadius: 5,
     paddingHorizontal: 10,

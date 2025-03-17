@@ -30,7 +30,9 @@ function LoginScreen() {
       
       <Input 
         label="Digite seu nome:" 
-        placeholder="Digite seu nome" 
+        placeholder="Digite seu nome"
+        value={name}
+        onChangeText={setName} 
       />
 
       {/* Campo de Email */}
