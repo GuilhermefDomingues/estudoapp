@@ -65,6 +65,19 @@ function LoginScreen() {
         <Text style={styles.link}>Política de privacidade</Text> e os nossos{" "}
         <Text style={styles.link}>Termos de uso</Text>.
       </Text>
+
+      {/* <Button
+          label="Hoteis"
+          variant="primary"
+          onPress={handleContinue}
+        /> */}
+
+      {/* <Button
+          label="Voos"
+          variant="secundary"
+          onPress={handleContinue}
+        /> */}
+
     </View>
   );
 }
