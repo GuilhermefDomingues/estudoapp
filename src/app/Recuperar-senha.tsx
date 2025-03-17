@@ -18,12 +18,12 @@ function RecuperarSenha() {
       {/* Logo */}
       <View style={styles.logoContainer}>
         <Image
-          source={require("../../assets/images/Logo.png")} // Certifique-se de que o caminho da imagem está correto
+          source={require("../../assets/images/Logo.png")} 
           style={styles.logo}
         />
       </View>
 
-      {/* Título e descrição */}
+      {/* Titulo e descricao */}
       <Text style={styles.title}>Recuperar senha</Text>
       <Text style={styles.description}>
         Coloque seu endereço de e-mail para receber o link de alteração de senha.
@@ -34,10 +34,10 @@ function RecuperarSenha() {
         label="Seu endereço de Email:"
         placeholder="email@example.com"
         value={email}
-        
+        onChange={setEmail}
       />
 
-      {/* Botão Enviar */}
+      {/* Botao Enviar */}
       <Button label={"Enviar"} onPress={handleSubmit} />
     </View>
   );
@@ -46,7 +46,7 @@ function RecuperarSenha() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FDD5E9", // Rosa claro
+    backgroundColor: "#FDD5E9", 
     padding: 20,
     justifyContent: "center",
     alignItems: "center",

@@ -5,18 +5,20 @@ type Props = {
   placeholder?: string;
   value?: string;
   secureTextEntry?: boolean;
+  onChange?: (text: string) => void;
 };
 
-function Input({ label, placeholder, value, secureTextEntry,}: Props) {
+function Input({ label, placeholder, onChange, value, secureTextEntry }: Props) {
   return (
     <View style={styles.container}>
-      {label && <Text style={styles.label}>{label}</Text>} 
+      {label && <Text style={styles.label}>{label}</Text>}
       <TextInput
         style={styles.input}
         placeholder={placeholder}
         value={value}
         secureTextEntry={secureTextEntry}
         placeholderTextColor="#999"
+        onChangeText={onChange} 
       />
     </View>
   );
@@ -25,7 +27,7 @@ function Input({ label, placeholder, value, secureTextEntry,}: Props) {
 const styles = StyleSheet.create({
   container: {
     width: "100%",
-    paddingHorizontal: 10, // Adicionado paddingHorizontal no container para não cortar as bordas
+    paddingHorizontal: 10,
   },
   label: {
     fontSize: 16,

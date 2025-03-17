@@ -32,7 +32,7 @@ function LoginScreen() {
         label="Digite seu nome:" 
         placeholder="Digite seu nome"
         value={name}
-        onChangeText={setName} 
+        onChange={setName} 
       />
 
       {/* Campo de Email */}
@@ -40,7 +40,7 @@ function LoginScreen() {
         label="Digite seu Email:" 
         placeholder="email@example.com" 
         value={email}
-        onChangeText={setEmail}
+        onChange={setEmail}
       />
 
       {/* Campo de Senha */}
@@ -49,7 +49,7 @@ function LoginScreen() {
         placeholder="*******" 
         secureTextEntry
         value={password}
-        onChangeText={setPassword}
+        onChange={setPassword}
       />
       
       {/* Campo de conf Senha */}
@@ -58,7 +58,7 @@ function LoginScreen() {
         placeholder="*******" 
         secureTextEntry
         value={ConfPassword}
-        onChangeText={setConfPassword}
+        onChange={setConfPassword}
       />
 
       {/* Botão Continuar */}

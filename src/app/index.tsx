@@ -8,7 +8,7 @@ function LoginScreen() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  // Função handleContinue para o botão
+  // Funcao handleContinue para o botao
   const handleContinue = () => {
     console.log("Botão Continuar pressionado");
   };
@@ -28,6 +28,7 @@ function LoginScreen() {
       <Input 
         label="Digite seu Email:" 
         placeholder="email@example.com" 
+        onChange={setEmail}
         value={email}
       />
 
@@ -37,6 +38,9 @@ function LoginScreen() {
         placeholder="*******" 
         secureTextEntry
         value={password}
+        onChange={setPassword}
+        
+      
       />
 
       {/* Link "Esqueceu a senha?" */}
@@ -69,12 +73,6 @@ function LoginScreen() {
       {/* <Button
           label="Hoteis"
           variant="primary"
-          onPress={handleContinue}
-        /> */}
-
-      {/* <Button
-          label="Voos"
-          variant="secundary"
           onPress={handleContinue}
         /> */}
 

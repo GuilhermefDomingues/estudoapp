@@ -9,7 +9,7 @@ type Props = TouchableOpacityProps & {
   variant?: Variant;
 };
 
-function Button({ label, variant = 'primary', ...rest }: Props) {
+function Buttoon({ label, variant = 'primary', ...rest }: Props) {
   const variantStyles = {
     primary: styles.primary,
     secondary: styles.secondary,
@@ -34,4 +34,4 @@ function Button({ label, variant = 'primary', ...rest }: Props) {
   );
 }
 
-export default Button;
+export default Buttoon;
