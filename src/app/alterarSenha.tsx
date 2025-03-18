@@ -27,7 +27,7 @@ function UpdatePassword() {
 
       {/* Campo de Senha */}
       <Input
-        label="Digite sua Senha:"
+        label="Nova Senha:"
         placeholder="*******"
         secureTextEntry
         value={password}
@@ -36,7 +36,7 @@ function UpdatePassword() {
 
       {/* Campo de conf Senha */}
       <Input
-        label="Confirme sua Senha:"
+        label="Confirme sua Nova Senha:"
         placeholder="*******"
         secureTextEntry
         value={ConfPassword}

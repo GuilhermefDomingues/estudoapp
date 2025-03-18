@@ -67,10 +67,10 @@ function LoginScreen() {
         <Text style={styles.link}>Termos de uso</Text>.
       </Text>
 
-      <View style={styles.ContainerButton}>
+      {/* <View style={styles.ContainerButton}>
         <Buttoon label="Hoteis" variant="primary" onPress={handleContinue} />
         <Buttoon label="Voos" variant="secondary" onPress={handleContinue} />
-      </View>
+      </View> */}
     </View>
   );
 }
