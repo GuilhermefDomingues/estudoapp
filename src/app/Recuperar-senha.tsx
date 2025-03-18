@@ -1,24 +1,25 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
+import { Link } from "expo-router";
 
 import Button from "../components/Button";
 import Input from "../components/Input";
+
 
 function RecuperarSenha() {
   const [email, setEmail] = useState("");
 
   // Função handleSubmit para o botão
   const handleSubmit = () => {
-    console.log("Botão Enviar pressionado")
+    console.log("Botão Enviar pressionado");
   };
 
   return (
     <View style={styles.container}>
-      
       {/* Logo */}
       <View style={styles.logoContainer}>
         <Image
-          source={require("../../assets/images/Logo.png")} 
+          source={require("../../assets/images/Logo.png")}
           style={styles.logo}
         />
       </View>
@@ -26,7 +27,8 @@ function RecuperarSenha() {
       {/* Titulo e descricao */}
       <Text style={styles.title}>Recuperar senha</Text>
       <Text style={styles.description}>
-        Coloque seu endereço de e-mail para receber o link de alteração de senha.
+        Coloque seu endereço de e-mail para receber o link de alteração de
+        senha.
       </Text>
 
       {/* Campo de Email */}
@@ -39,6 +41,13 @@ function RecuperarSenha() {
 
       {/* Botao Enviar */}
       <Button label={"Enviar"} onPress={handleSubmit} />
+
+      {/* ISSO VAI SAIR DAQUI */}
+      <View style={styles.ContainerRecPass}>
+        <Link href="/alterarSenha" style={styles.link}>
+          ir para alterar senha para olhar
+        </Link>
+      </View>
     </View>
   );
 }
@@ -46,7 +55,7 @@ function RecuperarSenha() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FDD5E9", 
+    backgroundColor: "#FDD5E9",
     padding: 20,
     justifyContent: "center",
     alignItems: "center",
@@ -63,7 +72,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: "bold",
-    color: "#333",
+    color: "#D6005D",
     marginBottom: 20,
   },
   description: {
@@ -71,6 +80,14 @@ const styles = StyleSheet.create({
     color: "#666",
     textAlign: "center",
     marginBottom: 30,
+  },
+  // ISSO VAI SAIR DAQUI 
+  ContainerRecPass: {
+    marginBottom: 10,
+  },
+  link: {
+    color: "#FF3366",
+    textDecorationLine: "underline",
   },
 });
 

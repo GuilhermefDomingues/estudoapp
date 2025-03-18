@@ -1,13 +1,11 @@
 import { View, Text, StyleSheet, Image } from "react-native";
 import React, { useState } from "react";
 import Button from "../components/Button";
-import Buttoon from "../components/2Button/2Button";
 import Input from "../components/Input";
-import { Link } from "expo-router";
 
-function LoginScreen() {
-  const [email, setEmail] = useState("");
+function UpdatePassword() {
   const [password, setPassword] = useState("");
+  const [ConfPassword, setConfPassword] = useState("");
 
   // Funcao handleContinue para o botao
   const handleContinue = () => {
@@ -24,14 +22,8 @@ function LoginScreen() {
         />
       </View>
 
-      {/* Campo de Email */}
-
-      <Input
-        label="Digite seu Email:"
-        placeholder="email@example.com"
-        onChange={setEmail}
-        value={email}
-      />
+      {/* Titulo e descricao */}
+        <Text style={styles.title}>Recuperar senha</Text>
 
       {/* Campo de Senha */}
       <Input
@@ -42,35 +34,19 @@ function LoginScreen() {
         onChange={setPassword}
       />
 
-      {/* Link "Esqueceu a senha?" */}
-      <View style={styles.ContainerRecPass}>
-        <Link href="/Recuperar-senha" style={styles.link}>
-          Esqueceu a senha?
-        </Link>
-      </View>
+      {/* Campo de conf Senha */}
+      <Input
+        label="Confirme sua Senha:"
+        placeholder="*******"
+        secureTextEntry
+        value={ConfPassword}
+        onChange={setConfPassword}
+      />
 
       {/* Botão Continuar */}
       <Button label={"Continuar"} onPress={handleContinue} />
 
-      {/* Texto "Cadastre-se aqui" com Link */}
-      <Text style={styles.textContainer}>
-        Não tem uma conta?{" "}
-        <Link href="/cadastro" style={styles.link}>
-          Cadastre-se aqui
-        </Link>
-      </Text>
 
-      {/* Texto de Política de Privacidade */}
-      <Text style={styles.termsText}>
-        Ao criar uma conta, você concorda com a nossa{" "}
-        <Text style={styles.link}>Política de privacidade</Text> e os nossos{" "}
-        <Text style={styles.link}>Termos de uso</Text>.
-      </Text>
-
-      <View style={styles.ContainerButton}>
-        <Buttoon label="Hoteis" variant="primary" onPress={handleContinue} />
-        <Buttoon label="Voos" variant="secondary" onPress={handleContinue} />
-      </View>
     </View>
   );
 }
@@ -127,12 +103,12 @@ const styles = StyleSheet.create({
   ContainerRecPass: {
     marginBottom: 10,
   },
-  ContainerButton: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    gap:10
-  },
+  title: {
+    fontSize: 24,
+    fontWeight: "bold",
+    color: "#D6005D",
+    marginBottom: 30,
+  }
 });
 
-export default LoginScreen;
+export default UpdatePassword;
